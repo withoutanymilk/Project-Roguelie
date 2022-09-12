@@ -13,10 +13,14 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveDirection;
     private Vector2 lastMoveDirection;
 
+    [SerializeField] Transform hand;
+    [SerializeField] GameObject arrow;
+
     void Update()
     {
         ProcessInputs();
         Animate();
+        RotateHand();
     }
     // Start is called before the first frame update
     void FixedUpdate()
@@ -37,6 +41,12 @@ public class PlayerMovement : MonoBehaviour
 
         moveDirection = new Vector2(moveX, moveY).normalized;
 
+    }
+
+    void RotateHand()
+    {
+        float angle = Utility.AngleTowardsMouse(hand.position);
+        hand.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
     }
 
     void Move()
