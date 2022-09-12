@@ -26,6 +26,10 @@ public class PlayerAttack : MonoBehaviour
 
     bool CanFire = true;
 
+    public float firerate = 2f;
+
+    private float nextTimeToFire = 0f;
+
     private void Start()
     {
         BowPowerSlider.value = 0f;
@@ -34,11 +38,12 @@ public class PlayerAttack : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetMouseButton(0) && CanFire)
+        if (Input.GetMouseButton(0) && CanFire )
         {
             ChargeBow();
-        }else if (Input.GetMouseButtonUp(0) && CanFire)
+        }else if (Input.GetMouseButtonUp(0) && CanFire && Time.time >= nextTimeToFire)
         {
+            nextTimeToFire = Time.time + 1f / firerate;
             FireBow();
         }
         else
