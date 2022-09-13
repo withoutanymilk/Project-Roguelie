@@ -11,17 +11,43 @@ public class PlayerMovement : MonoBehaviour
     public Animator anim;
 
     private Vector2 moveDirection;
+   
     private Vector2 lastMoveDirection;
 
     [SerializeField] Transform hand;
+   
     [SerializeField] GameObject arrow;
+
+    [SerializeField] public int maxHealth = 100;
+    
+    [SerializeField] public int currentHealth;
+    
+    public HealthBar healthBar;
+
+    void Start()
+    {
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
 
     void Update()
     {
         ProcessInputs();
         Animate();
         RotateHand();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            TakeDamage(20);
+        }
     }
+
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+    }
+
     // Start is called before the first frame update
     void FixedUpdate()
     {
