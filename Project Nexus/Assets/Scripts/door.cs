@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class door : MonoBehaviour
 {
+    public bool interactable = false;
     public Animator m_Animator;
     public UnityEvent Door_Open;
     public UnityEvent Door_Close;
@@ -18,25 +19,33 @@ public class door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    void OnTriggerStay2D(Collider2D collider)
-    {
-        if (collider.CompareTag("Player") && Input.GetKeyDown("e"))
+        if (interactable == true)
         {
-            if (DoorOpened == false)
+            if (/*collider.CompareTag("Player") && */Input.GetKeyDown("e"))
             {
-                Door_Open.Invoke();
-                m_Animator.SetBool("DoorOpened", true);
-                DoorOpened = true;
-            }
-            else
-            {
-                Door_Close.Invoke();
-                m_Animator.SetBool("DoorOpened", false);
-                DoorOpened = false;
+                if (DoorOpened == false)
+                {
+                    Door_Open.Invoke();
+                    m_Animator.SetBool("DoorOpened", true);
+                    DoorOpened = true;
+                }
+                else
+                {
+                    Door_Close.Invoke();
+                    m_Animator.SetBool("DoorOpened", false);
+                    DoorOpened = false;
+                }
             }
         }
+    }
+
+    private void OnTriggerStay2D(Collider2D collider)
+    {
+        interactable = true;
+    }
+
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        interactable = false;
     }
 }
