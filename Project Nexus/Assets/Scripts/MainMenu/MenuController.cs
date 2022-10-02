@@ -9,13 +9,13 @@ public class MenuController : MonoBehaviour
     [Header("volume Setting")]
     [SerializeField] private TMP_Text volumeTextValue = null;
     [SerializeField] private Slider volumeSlider = null;
-    [SerializeField] private float defaultVolume = 100f;
+    [SerializeField] private float defaultVolume = 1.0f;
 
     [Header("Gameplay Settings")]
     [SerializeField] private TMP_Text ControllerSenTextValue = null;
     [SerializeField] private Slider ControllerSenSlider = null;
-    [SerializeField] private int defaultSen = 100;
-    public int mainContollerSen = 100;
+    [SerializeField] private float defaultSen = 1.0f;
+    public float mainContollerSen = 100;
 
     [Header("Toggle Settings")]
     [SerializeField] private Toggle invertYToggle = null;
@@ -23,7 +23,7 @@ public class MenuController : MonoBehaviour
     [Header("Graphics Setttings")]
     [SerializeField] private Slider brightnessSlider = null;
     [SerializeField] private TMP_Text brightnessTextValue = null;
-    [SerializeField] private float defaultbrightness = 50;
+    [SerializeField] private float defaultbrightness = 0.5f;
 
     [Space(10)]
     [SerializeField] private TMP_Dropdown qualityDropdown;
@@ -178,7 +178,7 @@ public class MenuController : MonoBehaviour
         {
             //Reset brightness value
             brightnessSlider.value = defaultbrightness;
-            brightnessTextValue.text = defaultbrightness.ToString("0.0");
+            brightnessTextValue.text = defaultbrightness.ToString("0.0f");
 
             qualityDropdown.value = 1;
             QualitySettings.SetQualityLevel(1);
@@ -197,12 +197,12 @@ public class MenuController : MonoBehaviour
         {
             AudioListener.volume = defaultVolume;
             volumeSlider.value = defaultVolume;
-            volumeTextValue.text = defaultVolume.ToString("0.0");
+            volumeTextValue.text = defaultVolume.ToString("0.0f");
             VolumeApply();
         }
         if (MenuType == "Gameplay")
         {
-            ControllerSenTextValue.text = defaultSen.ToString("0");
+            ControllerSenTextValue.text = defaultSen.ToString("0.0f");
             ControllerSenSlider.value = defaultSen;
             mainContollerSen = defaultSen;
             invertYToggle.isOn = false;
