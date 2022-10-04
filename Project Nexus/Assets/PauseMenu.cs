@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool GameIsPause = false;
+    public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
-    public GameObject WeaponHolder;
+    public GameObject Weapon;
+    public GameObject Arrow;
 
     void start()
     {
@@ -19,7 +20,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (GameIsPause)
+            if (GameIsPaused)
             {
                 Resume();
             }
@@ -31,17 +32,19 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume()
     {
-        WeaponHolder.SetActive(true);
+        Arrow.SetActive(true);
+        Weapon.SetActive(true);
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        GameIsPause = false;
+        GameIsPaused = false;
     }
     public void Pause()
     {
-        WeaponHolder.SetActive(false);
+        Arrow.SetActive(false);
+        Weapon.SetActive(false);
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
-        GameIsPause = true;
+        GameIsPaused = true;
     }
     public void LoadMenu()
     {
