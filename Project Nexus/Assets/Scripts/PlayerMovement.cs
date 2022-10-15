@@ -43,18 +43,20 @@ public class PlayerMovement : MonoBehaviour
         ProcessInputs();
         Animate();
         RotateHand();
+        
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        /*if (Input.GetKeyDown(KeyCode.Space))
         {
             TakeDamage(20);
-        }
+        }*/
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (dashCoolCounter <= 0 && dashCooldown <= 0)
+            if (dashCoolCounter <= 0 && dashCounter <= 0)
             {
                 activeMoveSpeed = dashSpeed;
                 dashCounter = dashLength;
+                Debug.Log("Hello: ");
             }
         }
 
@@ -73,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
         {
             dashCoolCounter -= Time.deltaTime;
         }
+        Move();
     }
 
     void TakeDamage(int damage)
@@ -84,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void FixedUpdate()
     {
-        Move();
+        
     }
 
     // Update is called once per frame
