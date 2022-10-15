@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
         {
             dashCoolCounter -= Time.deltaTime;
         }
-        Move();
+        
     }
 
     void TakeDamage(int damage)
@@ -87,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void FixedUpdate()
     {
-        
+        Move();
     }
 
     // Update is called once per frame
