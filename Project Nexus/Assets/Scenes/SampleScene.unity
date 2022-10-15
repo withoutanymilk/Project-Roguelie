@@ -18051,6 +18051,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  dashSpeed: 10
+  dashLength: 0.5
+  dashCooldown: 1
   rb: {fileID: 1657294171}
   anim: {fileID: 1657294173}
   hand: {fileID: 974053860}
