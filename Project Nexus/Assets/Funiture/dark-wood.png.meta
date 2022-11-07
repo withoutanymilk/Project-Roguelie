@@ -113,6 +113,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -9976,8 +9988,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      dark-wood_140: 102422685
-      dark-wood_211: -153506922
       dark-wood_313: 1746218687
       dark-wood_2: 136594128
       dark-wood_151: 1623655581
@@ -10103,11 +10113,11 @@ TextureImporter:
       dark-wood_153: 629379531
       dark-wood_368: -392788658
       dark-wood_35: -1121858725
-      dark-wood_17: 1406092834
+      dark-wood_290: -823022801
       dark-wood_169: -714782451
       dark-wood_174: -1388516662
+      dark-wood_17: 1406092834
       dark-wood_359: -1359982279
-      dark-wood_290: -823022801
       dark-wood_155: 1928210494
       dark-wood_387: 1785783150
       dark-wood_379: -1435872780
@@ -10197,15 +10207,12 @@ TextureImporter:
       dark-wood_157: 1007245929
       dark-wood_77: 931205379
       dark-wood_327: 695191174
-      dark-wood_26: -1395801392
       dark-wood_323: 1920968667
-      dark-wood_148: -1574918040
-      dark-wood_238: 955956734
-      dark-wood_179: -1400447611
-      dark-wood_407: 647928709
       dark-wood_451: 693744752
-      dark-wood_356: 546459240
-      dark-wood_83: -620598526
+      dark-wood_148: -1574918040
+      dark-wood_179: -1400447611
+      dark-wood_26: -1395801392
+      dark-wood_407: 647928709
       dark-wood_92: 369207811
       dark-wood_189: 207630647
       dark-wood_265: 929106271
@@ -10217,13 +10224,13 @@ TextureImporter:
       dark-wood_287: 1854750666
       dark-wood_170: 719624815
       dark-wood_1: -305971323
-      dark-wood_197: 67406135
-      dark-wood_314: 453482171
       dark-wood_360: -1262529405
-      dark-wood_423: 1220512745
+      dark-wood_314: 453482171
+      dark-wood_197: 67406135
       dark-wood_320: 1442558087
-      dark-wood_433: 1687003416
+      dark-wood_423: 1220512745
       dark-wood_405: -40786478
+      dark-wood_433: 1687003416
       dark-wood_271: 100626794
       dark-wood_117: 1118795806
       dark-wood_430: 580906124
@@ -10277,9 +10284,9 @@ TextureImporter:
       dark-wood_150: -1874402754
       dark-wood_207: 353203320
       dark-wood_165: -895845788
-      dark-wood_227: -1796348001
-      dark-wood_78: -325998347
       dark-wood_341: -1199932789
+      dark-wood_78: -325998347
+      dark-wood_227: -1796348001
       dark-wood_453: 526627102
       dark-wood_136: -1065129450
       dark-wood_340: 10365594
@@ -10444,7 +10451,7 @@ TextureImporter:
       dark-wood_468: 1082845578
       dark-wood_413: 1412672591
       dark-wood_62: -1376463154
-      dark-wood_8: -2088889066
+      dark-wood_140: 102422685
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

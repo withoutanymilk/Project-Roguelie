@@ -113,6 +113,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -2155,8 +2167,8 @@ TextureImporter:
       dungeonex_31: -227406749
       dungeonex_87: -351359012
       dungeonex_1: -373508240
-      dungeonex_39: 527312131
       dungeonex_61: 1588636877
+      dungeonex_39: 527312131
       dungeonex_86: 801619315
       dungeonex_3: 2079026691
       dungeonex_10: -1909530396
