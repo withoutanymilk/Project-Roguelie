@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator anim;
 
+    public GameObject SwordSprite;
+
     public GameObject SwordObject;
 
     private Vector2 moveDirection;
@@ -86,18 +88,26 @@ public class PlayerMovement : MonoBehaviour
     {
         float angle = Utility.AngleTowardsMouse(hand.position);
         hand.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
+        
+        //flips the sword sprite
+        Vector2 scale = SwordSprite.transform.localScale;
+        //Vector2 scale2 = SwordObject.transform.localScale;
 
-        if (angle >= -90 && angle <= 90)
+        if (angle >= -90 && angle <= 90) //right
         {
-            Vector2 scale = SwordObject.transform.localScale;
-            scale.y = .4f;
-            SwordObject.transform.localScale = scale;
+            scale.y = 1f;
+            //scale2.y = .4f;
+            SwordSprite.transform.localScale = scale;
+            
+            //SwordObject.transform.localScale = scale2;
         }
         else
         {
-            Vector2 scale = SwordObject.transform.localScale;
-            scale.y = -.4f;
-            SwordObject.transform.localScale = scale;
+            scale.y = -1f;
+            //scale2.y = -.4f;
+            SwordSprite.transform.localScale = scale;
+            
+            //SwordObject.transform.localScale = scale2;
         }
         Debug.Log(angle);
     }

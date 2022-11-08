@@ -18,13 +18,21 @@ public class PlayerAttack : MonoBehaviour
 
     [SerializeField] float BowPower;
 
+    [SerializeField] float SwordPower;
+
     [Range(0, 3)]
 
     [SerializeField] float MaxBowCharge;
 
+    [SerializeField] float MaxSwordCharge;
+
     float BowCharge;
 
+    float SwordCharge;
+
     bool CanFire = true;
+
+    bool CanSwing = true;
 
     bool BowActive = true;
 
@@ -32,13 +40,15 @@ public class PlayerAttack : MonoBehaviour
 
     public float firerate = 2f;
 
+    public float swingrate = 2f;
+
     public GameObject BowObject;
 
     public GameObject SwordObject;
 
-
-
     private float nextTimeToFire = 0f;
+
+    private float nextTimeToSwing = 0f;
 
     private void Start()
     {
@@ -49,7 +59,7 @@ public class PlayerAttack : MonoBehaviour
     private void Update()
     {
         ChangeWeapon(); //check if the player changes weapons
-        
+
         if (BowActive == true && SwordActive == false)
         {
             UseBow();
@@ -59,9 +69,6 @@ public class PlayerAttack : MonoBehaviour
         {
             UseSword();
         }
-
-
-
     }
 
     void UseBow()
@@ -69,14 +76,15 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetMouseButton(0) && CanFire)
         {
             ChargeBow();
-        }else if (Input.GetMouseButtonUp(0) && CanFire && Time.time >= nextTimeToFire)
+        }
+        else if (Input.GetMouseButtonUp(0) && CanFire && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f / firerate;
             FireBow();
         }
         else
         {
-            if(BowCharge > 0f)
+            if (BowCharge > 0f)
             {
                 BowCharge -= 1f * Time.deltaTime;
             }
@@ -88,11 +96,6 @@ public class PlayerAttack : MonoBehaviour
 
             BowPowerSlider.value = BowCharge;
         }
-    }
-
-    void UseSword()
-    {
-        //Sword code
     }
 
     void ChargeBow()
@@ -130,6 +133,45 @@ public class PlayerAttack : MonoBehaviour
         CanFire = false;
 
         ArrowGFX.enabled = false;
+    }
+
+    void UseSword()
+    {
+        if (Input.GetMouseButton(0) && CanSwing)
+        {
+            ChargeSword();
+        }
+        else if (Input.GetMouseButtonUp(0) && CanSwing && Time.time >= nextTimeToSwing)
+        {
+            nextTimeToSwing = Time.time + 1f / swingrate;
+            SwingSword();
+        }
+        else
+        {
+            if (SwordCharge > 0f)
+            {
+                SwordCharge -= 1f * Time.deltaTime;
+            }
+            else
+            {
+                SwordCharge = 0f;
+                CanSwing = true;
+            }
+
+            BowPowerSlider.value = SwordCharge;
+        }
+    }
+
+    void ChargeSword()
+    {
+        
+    }
+
+    void SwingSword()
+    {
+        
+        
+        CanSwing = false;
     }
 
     void ChangeWeapon()
