@@ -99,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
             scale.y = -.4f;
             SwordObject.transform.localScale = scale;
         }
-        //Debug.Log(angle);
+        Debug.Log(angle);
     }
 
     void Move()
