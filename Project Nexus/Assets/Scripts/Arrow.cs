@@ -5,6 +5,8 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
     public float ArrowVelocity;
+    
+    public float ArrowDamage;
 
     [SerializeField] Rigidbody2D rb;
 
@@ -22,6 +24,12 @@ public class Arrow : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        if (other.gameObject.tag == "Enemy")
+        {
+            Debug.Log("Enemy Attacked");
+            Enemy enemy = other.gameObject.GetComponent<Enemy>();
+            enemy.TakeDamage(ArrowDamage);
+        }
         Destroy(gameObject);
     }
 }

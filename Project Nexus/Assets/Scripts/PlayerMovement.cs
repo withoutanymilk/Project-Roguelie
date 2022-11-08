@@ -25,16 +25,16 @@ public class PlayerMovement : MonoBehaviour
    
     [SerializeField] GameObject arrow;
 
-    [SerializeField] public int maxHealth = 100;
+    //[SerializeField] public int maxHealth = 100;
     
-    [SerializeField] public int currentHealth;
+    //[SerializeField] public int currentHealth;
     
-    public HealthBar healthBar;
+    //public HealthBar healthBar;
 
     void Start()
     {
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        //currentHealth = maxHealth;
+        //healthBar.SetMaxHealth(maxHealth);
         activeMoveSpeed = moveSpeed;
     }
 
@@ -78,11 +78,11 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-    void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
-    }
+    //void TakeDamage(int damage)
+    //{
+    //    currentHealth -= damage;
+    //    healthBar.SetHealth(currentHealth);
+    //}
 
     // Start is called before the first frame update
     void FixedUpdate()
