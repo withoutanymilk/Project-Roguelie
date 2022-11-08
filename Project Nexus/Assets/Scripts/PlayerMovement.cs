@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public ParticleSystem dust;
+
     public float moveSpeed;
 
     private float activeMoveSpeed;
@@ -43,39 +45,12 @@ public class PlayerMovement : MonoBehaviour
         ProcessInputs();
         Animate();
         RotateHand();
-        
+        Dash();
 
         /*if (Input.GetKeyDown(KeyCode.Space))
         {
             TakeDamage(20);
         }*/
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (dashCoolCounter <= 0 && dashCounter <= 0)
-            {
-                activeMoveSpeed = dashSpeed;
-                dashCounter = dashLength;
-                Debug.Log("Hello: ");
-            }
-        }
-
-        if (dashCounter > 0)
-        {
-            dashCounter -= Time.deltaTime;
-
-            if(dashCounter <= 0)
-            {
-                activeMoveSpeed = moveSpeed;
-                dashCoolCounter = dashCooldown;
-            }
-        }
-
-        if (dashCoolCounter > 0)
-        {
-            dashCoolCounter -= Time.deltaTime;
-        }
-        
     }
 
     //void TakeDamage(int damage)
@@ -123,6 +98,41 @@ public class PlayerMovement : MonoBehaviour
         anim.SetFloat("AnimMoveMagnitude", moveDirection.magnitude);
         anim.SetFloat("AnimLastMoveX", lastMoveDirection.x);
         anim.SetFloat("AnimLastMoveY", lastMoveDirection.y);
+    }
+
+    void Dash()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (dashCoolCounter <= 0 && dashCounter <= 0)
+            {
+                activeMoveSpeed = dashSpeed;
+                dashCounter = dashLength;
+                CreateDust();
+                Debug.Log("Hello: ");
+            }
+        }
+
+        if (dashCounter > 0)
+        {
+            dashCounter -= Time.deltaTime;
+
+            if (dashCounter <= 0)
+            {
+                activeMoveSpeed = moveSpeed;
+                dashCoolCounter = dashCooldown;
+            }
+        }
+
+        if (dashCoolCounter > 0)
+        {
+            dashCoolCounter -= Time.deltaTime;
+        }
+    }
+
+    void CreateDust()
+    {
+        dust.Play();
     }
 
 }
