@@ -26,7 +26,17 @@ public class PlayerAttack : MonoBehaviour
 
     bool CanFire = true;
 
+    bool BowActive = true;
+
+    bool SwordActive = false;
+
     public float firerate = 2f;
+
+    public GameObject BowObject;
+
+    public GameObject SwordObject;
+
+
 
     private float nextTimeToFire = 0f;
 
@@ -38,7 +48,25 @@ public class PlayerAttack : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetMouseButton(0) && CanFire )
+        ChangeWeapon(); //check if the player changes weapons
+        
+        if (BowActive == true && SwordActive == false)
+        {
+            UseBow();
+        }
+
+        else if (BowActive == false && SwordActive == true)
+        {
+            UseSword();
+        }
+
+
+
+    }
+
+    void UseBow()
+    {
+        if (Input.GetMouseButton(0) && CanFire)
         {
             ChargeBow();
         }else if (Input.GetMouseButtonUp(0) && CanFire && Time.time >= nextTimeToFire)
@@ -60,6 +88,11 @@ public class PlayerAttack : MonoBehaviour
 
             BowPowerSlider.value = BowCharge;
         }
+    }
+
+    void UseSword()
+    {
+        //Sword code
     }
 
     void ChargeBow()
@@ -97,5 +130,28 @@ public class PlayerAttack : MonoBehaviour
         CanFire = false;
 
         ArrowGFX.enabled = false;
+    }
+
+    void ChangeWeapon()
+    {
+        if (Input.GetKeyDown("1"))
+        {
+            Debug.Log("Bow");
+            BowActive = true;
+            SwordActive = false;
+
+            BowObject.SetActive(true);
+            SwordObject.SetActive(false);
+        }
+
+        if (Input.GetKeyDown("2"))
+        {
+            Debug.Log("Sword");
+            BowActive = false;
+            SwordActive = true;
+
+            BowObject.SetActive(false);
+            SwordObject.SetActive(true);
+        }
     }
 }

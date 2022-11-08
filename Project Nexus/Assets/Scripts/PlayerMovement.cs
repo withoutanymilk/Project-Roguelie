@@ -109,7 +109,6 @@ public class PlayerMovement : MonoBehaviour
                 activeMoveSpeed = dashSpeed;
                 dashCounter = dashLength;
                 CreateDust();
-                Debug.Log("Hello: ");
             }
         }
 
