@@ -91,25 +91,22 @@ public class PlayerMovement : MonoBehaviour
         
         //flips the sword sprite
         Vector2 scale = SwordSprite.transform.localScale;
-        //Vector2 scale2 = SwordObject.transform.localScale;
 
         if (angle >= -90 && angle <= 90) //right
         {
             scale.y = 1f;
-            //scale2.y = .4f;
             SwordSprite.transform.localScale = scale;
-            
-            //SwordObject.transform.localScale = scale2;
+           
         }
         else
         {
             scale.y = -1f;
-            //scale2.y = -.4f;
+            
             SwordSprite.transform.localScale = scale;
             
-            //SwordObject.transform.localScale = scale2;
+            
         }
-        Debug.Log(angle);
+        //Debug.Log(angle);
     }
 
     void Move()
