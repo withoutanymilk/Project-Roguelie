@@ -11,6 +11,10 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private Slider healthSlider;
 
+    public GameObject gameOverUI;
+
+    public bool gameOver;
+
 
     // Start is called before the first frame update
     private void Start()
@@ -32,7 +36,17 @@ public class PlayerHealth : MonoBehaviour
             health = 0f;
             healthSlider.value = health;
             Destroy(gameObject);
+            GameOver();
         }
+    }
+
+    void GameOver()
+    {
+
+        gameOver = true;
+        gameOverUI.SetActive(true);
+        Time.timeScale = 1f;
+        //WeaponHolder.SetActive(false);
     }
     private void OnGUI()
     {
