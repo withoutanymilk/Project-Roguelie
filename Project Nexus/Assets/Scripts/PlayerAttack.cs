@@ -88,7 +88,7 @@ public class PlayerAttack : MonoBehaviour
             if (BowCharge > 0f)
             {
                 BowCharge -= 1f * Time.deltaTime;
-                FindObjectOfType<AudioManager>().Play("Arrow Charging");
+                //FindObjectOfType<AudioManager>().Play("Arrow Charging");
             }
             else
             {

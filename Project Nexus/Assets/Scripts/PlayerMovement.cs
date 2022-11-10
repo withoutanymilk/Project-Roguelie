@@ -155,6 +155,8 @@ public class PlayerMovement : MonoBehaviour
     void CreateDust()
     {
         dust.Play();
+        FindObjectOfType<AudioManager>().Play("Dash");
+
     }
 
 }
