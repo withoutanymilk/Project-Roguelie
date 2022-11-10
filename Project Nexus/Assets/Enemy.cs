@@ -1,22 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
     [Header("Movement")]
-    public float speed;
+    public float speed = 3f;
     [Header("Attack")]
-    [SerializeField] private float attackDamage;
-    [SerializeField] private float attackSpeed;
+    [SerializeField] private float attackDamage = 10f;
+    [SerializeField] private float attackSpeed = 1f;
     private float canAttack;
 
     [Header("Health")]
-    [SerializeField] private float health;
+    private float health;
     [SerializeField] private float maxHealth;
-    public Image healthImage;
-    public GameObject deathEffect;
 
 
     private Transform target;
@@ -33,16 +30,8 @@ public class Enemy : MonoBehaviour
 
         if(health <= 0)
         {
-            Die();
-            FindObjectOfType<AudioManager>().Play("Death");
+            Destroy(gameObject);
         }
-    }
-
-    void Die()
-    {
-        GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
-        Destroy(effect, 0.5f);
-        Destroy(gameObject);
     }
 
     private void FixedUpdate()
@@ -52,12 +41,6 @@ public class Enemy : MonoBehaviour
             float step = speed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, target.position, step);
         }
-    }
-
-    void Update()
-    {
-
-        healthImage.fillAmount = health / maxHealth;
     }
 
     private void OnCollisionStay2D(Collision2D other)
