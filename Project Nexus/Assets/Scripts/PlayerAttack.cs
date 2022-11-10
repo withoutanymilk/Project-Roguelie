@@ -81,6 +81,7 @@ public class PlayerAttack : MonoBehaviour
         {
             nextTimeToFire = Time.time + 1f / firerate;
             FireBow();
+            FindObjectOfType<AudioManager>().Play("Arrow Fired");
         }
         else
         {
@@ -92,6 +93,7 @@ public class PlayerAttack : MonoBehaviour
             {
                 BowCharge = 0f;
                 CanFire = true;
+                FindObjectOfType<AudioManager>().Play("Arrow Charging");
             }
 
             BowPowerSlider.value = BowCharge;

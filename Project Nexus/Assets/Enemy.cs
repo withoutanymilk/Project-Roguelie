@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class Enemy : MonoBehaviour
     [Header("Health")]
     private float health;
     [SerializeField] private float maxHealth;
+    public GameObject deathEffect;
+    public Image healthImage;
+
 
 
     private Transform target;
@@ -30,8 +34,16 @@ public class Enemy : MonoBehaviour
 
         if(health <= 0)
         {
-            Destroy(gameObject);
+            Die();
+            FindObjectOfType<AudioManager>().Play("Death");
         }
+    }
+
+    void Die()
+    {
+        GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
+        Destroy(effect, 0.5f);
+        Destroy(gameObject);
     }
 
     private void FixedUpdate()
@@ -41,6 +53,12 @@ public class Enemy : MonoBehaviour
             float step = speed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, target.position, step);
         }
+    }
+
+    void Update()
+    {
+
+        healthImage.fillAmount = health / maxHealth;
     }
 
     private void OnCollisionStay2D(Collision2D other)
