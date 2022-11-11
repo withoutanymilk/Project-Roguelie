@@ -50,6 +50,8 @@ public class PlayerAttack : MonoBehaviour
 
     private float nextTimeToSwing = 0f;
 
+    private Animator swordAnim;
+
     private void Start()
     {
         BowPowerSlider.value = 0f;
