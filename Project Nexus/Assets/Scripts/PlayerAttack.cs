@@ -42,6 +42,10 @@ public class PlayerAttack : MonoBehaviour
 
     public float swingrate = 2f;
 
+    public float SwordCooldown = 2f;
+
+    private float SwordCdCounter = 2f;
+
     public GameObject BowObject;
 
     public GameObject SwordObject;
@@ -50,7 +54,7 @@ public class PlayerAttack : MonoBehaviour
 
     private float nextTimeToSwing = 0f;
 
-    private Animator swordAnim;
+    public Animator swordAnim;
 
     private void Start()
     {
@@ -154,7 +158,7 @@ public class PlayerAttack : MonoBehaviour
         {
             if (SwordCharge > 0f)
             {
-                SwordCharge -= 1f * Time.deltaTime;
+                SwordCdCounter -= 1f * Time.deltaTime;
             }
             else
             {
@@ -168,12 +172,21 @@ public class PlayerAttack : MonoBehaviour
 
     void ChargeSword()
     {
-        
+        SwingSword();
     }
 
     void SwingSword()
     {
-        
+        if (SwordCooldown <= 0)
+        {
+            swordAnim.SetBool("SwingLeft",true);
+            swordAnim.SetBool("SwingRight", false);
+
+            SwordCooldown = 1f * Time.deltaTime;
+
+            //swordAnim.SetBool("SwingLeft", false);
+        }
+
         
         CanSwing = false;
     }
@@ -185,7 +198,6 @@ public class PlayerAttack : MonoBehaviour
             Debug.Log("Bow");
             BowActive = true;
             SwordActive = false;
-
             BowObject.SetActive(true);
             SwordObject.SetActive(false);
         }
