@@ -6,14 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class GameOverScreen : MonoBehaviour
 {
-   // public Text pointsText;
+    // public Text pointsText;
 
-   /* public void Setup(int Scores)
-    {
-        gameObject.SetActive(true);
-        pointsText.text = Scores.ToString() + " Points";
-    }
-   */
+    /* public void Setup(int Scores)
+     {
+         gameObject.SetActive(true);
+         pointsText.text = Scores.ToString() + " Points";
+     }
+    */
+
 
     public void RestartButton()
     {
