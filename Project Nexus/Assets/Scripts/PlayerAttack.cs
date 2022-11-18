@@ -40,11 +40,11 @@ public class PlayerAttack : MonoBehaviour
 
     public float firerate = 2f;
 
-    public float swingrate = 2f;
+    //public float swingrate = 2f;
 
-    public float SwordCooldown = 2f;
+    public float SwordCooldown = 1f;
 
-    private float SwordCdCounter = 2f;
+    private float SwordCdCounter;
 
     public GameObject BowObject;
 
@@ -52,7 +52,7 @@ public class PlayerAttack : MonoBehaviour
 
     private float nextTimeToFire = 0f;
 
-    private float nextTimeToSwing = 0f;
+    //private float nextTimeToSwing = 0f;
 
     public Animator swordAnim;
 
@@ -60,6 +60,7 @@ public class PlayerAttack : MonoBehaviour
     {
         BowPowerSlider.value = 0f;
         BowPowerSlider.maxValue = MaxBowCharge;
+        SwordCdCounter = SwordCooldown;
     }
     
     private void Update()
@@ -145,50 +146,51 @@ public class PlayerAttack : MonoBehaviour
 
     void UseSword()
     {
+        //Debug.Log(CanSwing);
         if (Input.GetMouseButton(0) && CanSwing)
         {
-            ChargeSword();
+            SwingSword();
         }
-        else if (Input.GetMouseButtonUp(0) && CanSwing && Time.time >= nextTimeToSwing)
+        /*else if (Input.GetMouseButtonUp(0) && CanSwing && Time.time >= nextTimeToSwing)
         {
             nextTimeToSwing = Time.time + 1f / swingrate;
             SwingSword();
-        }
+        }*/
         else
         {
-            if (SwordCharge > 0f)
+            if (SwordCdCounter > 0f)
             {
+                swordAnim.SetBool("CanSwing", false);
                 SwordCdCounter -= 1f * Time.deltaTime;
             }
             else
             {
-                SwordCharge = 0f;
+                //SwordCharge = 0f;
                 CanSwing = true;
+
             }
 
-            BowPowerSlider.value = SwordCharge;
+            //BowPowerSlider.value = SwordCharge;
         }
     }
 
-    void ChargeSword()
+/*    void ChargeSword()
     {
         SwingSword();
-    }
+    }*/
 
     void SwingSword()
     {
-        if (SwordCooldown <= 0)
+        Debug.Log("I am out here");
+        Debug.Log(SwordCdCounter);
+        if (SwordCdCounter <= 0)
         {
-            swordAnim.SetBool("SwingLeft",true);
-            swordAnim.SetBool("SwingRight", false);
-
-            SwordCooldown = 1f * Time.deltaTime;
-
-            //swordAnim.SetBool("SwingLeft", false);
+            Debug.Log("I am here");
+            swordAnim.SetBool("CanSwing", true);
+            SwordCdCounter = SwordCooldown;
         }
-
-        
         CanSwing = false;
+        //swordAnim.SetBool("CanSwing", false);
     }
 
     void ChangeWeapon()

@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject SwordObject;
 
+    public Animator swordAnim;
+
     private Vector2 moveDirection;
    
     private Vector2 lastMoveDirection;
@@ -96,15 +98,18 @@ public class PlayerMovement : MonoBehaviour
         {
             scale.y = 1f;
             SwordSprite.transform.localScale = scale;
-           
+            swordAnim.SetBool("SwingLeft", false);
+            swordAnim.SetBool("SwingRight", true);
+
         }
         else
         {
             scale.y = -1f;
             
             SwordSprite.transform.localScale = scale;
-            
-            
+            swordAnim.SetBool("SwingLeft", true);
+            swordAnim.SetBool("SwingRight", false);
+
         }
         //Debug.Log(angle);
     }
