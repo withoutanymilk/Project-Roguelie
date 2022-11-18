@@ -34,7 +34,7 @@ public class DialogueHitbox : MonoBehaviour
         }
         if (Input.GetKeyDown("e") && collected == false)
         {
-            Debug.Log("I am out here");
+
             collected = true;
             DisplayText.Invoke();
         } 
