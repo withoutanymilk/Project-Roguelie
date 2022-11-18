@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Sword : MonoBehaviour
 {
-    //public float ArrowVelocity;
+    //public float SwordVelocity;
 
     public float SwordDamage;
 
@@ -19,7 +19,7 @@ public class Sword : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        //rb.velocity = transform.up * ArrowVelocity;
+        //rb.velocity = transform.up * SwordVelocity;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
