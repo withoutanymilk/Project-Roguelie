@@ -181,11 +181,11 @@ public class PlayerAttack : MonoBehaviour
 
     void SwingSword()
     {
-        Debug.Log("I am out here");
+        //Debug.Log("I am out here");
         Debug.Log(SwordCdCounter);
         if (SwordCdCounter <= 0)
         {
-            Debug.Log("I am here");
+            //Debug.Log("I am here");
             swordAnim.SetBool("CanSwing", true);
             SwordCdCounter = SwordCooldown;
         }

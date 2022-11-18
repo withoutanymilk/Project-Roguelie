@@ -12,7 +12,7 @@ public class DialogueHitbox : MonoBehaviour
     public UnityEvent InteractIconOff;
     public Animator animator;
     public GameObject DialogueBox;
-    public bool collected;
+    public bool collected = false;
 
     void Awake()
     {
@@ -21,21 +21,26 @@ public class DialogueHitbox : MonoBehaviour
 
     protected void OnTriggerEnter2D(Collider2D obj)
     {
+        collected = false;
+    }
+
+    protected void OnTriggerStay2D(Collider2D obj)
+    {
+        
         if (Input.GetKeyDown("e") && collected == true)
         {
+
             NextSentence.Invoke();
         }
         if (Input.GetKeyDown("e") && collected == false)
         {
+            Debug.Log("I am out here");
             collected = true;
             DisplayText.Invoke();
         } 
-    InteractIconOn.Invoke();
-    }
+        InteractIconOn.Invoke();
 
-    private void OnTriggerStay2D(Collider2D obj)
-    {
-        if(animator.GetBool("IsOpen") == false)
+        if (animator.GetBool("IsOpen") == false)
         {
             collected = false;
         }
