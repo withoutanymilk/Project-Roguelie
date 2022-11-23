@@ -1572,7 +1572,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &163851743
 GameObject:
@@ -3996,7 +3996,7 @@ MonoBehaviour:
   qualityDropdown: {fileID: 866114551}
   fullScreenToggle: {fileID: 1136866443}
   confirmationPrompt: {fileID: 1955688685}
-  _newGameLevel: SampleScene
+  _newGameLevel: Level1
   noSavedGameDialog: {fileID: 1501017875}
   resolutionDropdown: {fileID: 2098601368}
   loadGameButton: {fileID: 1083630203}
@@ -4013,7 +4013,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &352227034
 GameObject:
@@ -5585,7 +5585,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &481310289
 GameObject:
@@ -6774,7 +6774,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7462751552410232871, guid: f144cd7a73db2884a8bffbb275ef5eac, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7462751552410232871, guid: f144cd7a73db2884a8bffbb275ef5eac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10158,7 +10158,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &749618274
 MonoBehaviour:
@@ -14407,7 +14407,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &994408964
 GameObject:
@@ -18275,7 +18275,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1360285327
 GameObject:
@@ -20593,7 +20593,7 @@ RectTransform:
   - {fileID: 1955688686}
   - {fileID: 2075545200}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
