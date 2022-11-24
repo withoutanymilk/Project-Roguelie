@@ -53,4 +53,16 @@ public class PlayerHealth : MonoBehaviour
         float t = Time.deltaTime / 1f;
         healthSlider.value = Mathf.Lerp(healthSlider.value, health, t);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("OnTriggerEnter2D " + collision.gameObject.name + " " + this.name);
+
+        if (collision.gameObject.CompareTag("PowerupHealth") && (health < 100))      //Triggers if the player collides with object with tag "PowerupHealth", they regain health.
+        {
+            Destroy(collision.gameObject);
+            UpdateHealth(+15);
+        }
+
+    }
 }

@@ -9,10 +9,13 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
 
     private float activeMoveSpeed;
+
     public float dashSpeed;
 
     public float dashLength = .5f, dashCooldown = 1f;
+
     private float dashCounter;
+
     private float dashCoolCounter;
 
     public Rigidbody2D rb;
@@ -33,37 +36,21 @@ public class PlayerMovement : MonoBehaviour
    
     [SerializeField] GameObject arrow;
 
-    //[SerializeField] public int maxHealth = 100;
-    
-    //[SerializeField] public int currentHealth;
-    
-    //public HealthBar healthBar;
-
     void Start()
     {
-        //currentHealth = maxHealth;
-        //healthBar.SetMaxHealth(maxHealth);
         activeMoveSpeed = moveSpeed;
     }
 
     void Update()
     {
         ProcessInputs();
+
         Animate();
+
         RotateHand();
+
         Dash();
-
-        /*if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(20);
-        }*/
     }
-
-    //void TakeDamage(int damage)
-    //{
-    //    currentHealth -= damage;
-    //    healthBar.SetHealth(currentHealth);
-    //}
 
     // Start is called before the first frame update
     void FixedUpdate()
@@ -111,7 +98,6 @@ public class PlayerMovement : MonoBehaviour
             swordAnim.SetBool("SwingRight", false);
 
         }
-        //Debug.Log(angle);
     }
 
     void Move()
