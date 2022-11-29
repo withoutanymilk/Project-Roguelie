@@ -50,8 +50,8 @@ public class PlayerHealth : MonoBehaviour
     }
     private void OnGUI()
     {
-        float t = Time.deltaTime / 1f;
-        healthSlider.value = Mathf.Lerp(healthSlider.value, health, t);
+        //float t = Time.deltaTime / 1f;
+        healthSlider.value = health;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
