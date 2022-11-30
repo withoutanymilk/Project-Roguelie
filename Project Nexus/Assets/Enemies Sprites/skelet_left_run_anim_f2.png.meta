@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 93d8eeed4d95fe540991eb91327d3e73
+guid: 9681031a34363714790ee0f49ea34f9c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,29 +101,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: skelet_idle_anim_f0_0
+      name: skelet_left_run_anim_f2_0
       rect:
         serializedVersion: 2
         x: 3
-        y: 0
+        y: 1
         width: 10
-        height: 14
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 432900fb95e61e948b750f0533157c19
-      internalID: 763325150
+      spriteID: 0164127a6075750499c6bf1756195c3b
+      internalID: -1367600258
       vertices: []
       indices: 
       edges: []
@@ -148,7 +136,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      skelet_idle_anim_f0_0: 763325150
+      skelet_left_run_anim_f2_0: -1367600258
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
