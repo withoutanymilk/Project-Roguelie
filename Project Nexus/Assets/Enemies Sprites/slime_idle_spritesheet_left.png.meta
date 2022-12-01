@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4711c1da6aaf3d64eb24607159d7c986
+guid: b85d3d95738e89647a95d11cb36c530f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,29 +101,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: slime_run_0
+      name: slime_idle_left_0
       rect:
         serializedVersion: 2
         x: 0
         y: 1
         width: 16
-        height: 12
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b58101c218e5f04fbb47df76e5c07e6
-      internalID: -95198782
+      spriteID: a9b4a2075f7737c49a436ab78737c824
+      internalID: -1143540526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_run_1
+      name: slime_idle_left_1
       rect:
         serializedVersion: 2
         x: 16
         y: 1
         width: 16
-        height: 12
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5bb64d8035328848bc9ff7cd296aa17
-      internalID: -598033737
+      spriteID: a21fa6e1bf0017c4787dc3d8c77a9653
+      internalID: -1749788826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_run_2
+      name: slime_idle_left_2
       rect:
         serializedVersion: 2
         x: 32
@@ -173,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8b49f68c5e1fc64282222796ca15760
-      internalID: 1142664055
+      spriteID: 5f8b0e73b1c61bb438b730750ea0a956
+      internalID: 2060603021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_run_3
+      name: slime_idle_left_3
       rect:
         serializedVersion: 2
         x: 48
@@ -194,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 735d418b75fae3a4096c1bda75676883
-      internalID: -768654693
+      spriteID: 336c7b59f3da6a144a8a559934cdaed0
+      internalID: 32752895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_run_4
+      name: slime_idle_left_4
       rect:
         serializedVersion: 2
         x: 64
@@ -215,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1386d356642d2b84a9fb3bbd48422223
-      internalID: -1740235483
+      spriteID: 8ffba85637f6d66479f3d9135f01b0c6
+      internalID: -1700631699
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_run_5
+      name: slime_idle_left_5
       rect:
         serializedVersion: 2
         x: 80
@@ -236,8 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83734b3c843739843a715ac42431b116
-      internalID: 1753509269
+      spriteID: 8e178120be3d3e6479c259d822ccd596
+      internalID: -1765341262
       vertices: []
       indices: 
       edges: []
@@ -253,12 +241,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      slime_run_0: -95198782
-      slime_run_1: -598033737
-      slime_run_2: 1142664055
-      slime_run_3: -768654693
-      slime_run_4: -1740235483
-      slime_run_5: 1753509269
+      slime_idle_left_3: 32752895
+      slime_idle_left_2: 2060603021
+      slime_idle_left_5: -1765341262
+      slime_idle_left_0: -1143540526
+      slime_idle_left_4: -1700631699
+      slime_idle_left_1: -1749788826
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
