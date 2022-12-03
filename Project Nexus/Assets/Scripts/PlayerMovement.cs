@@ -32,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
    
     private Vector2 lastMoveDirection;
 
+    private Vector2 boxSize = new Vector2(.5f, .5f);
+
     [SerializeField] Transform hand;
    
     [SerializeField] GameObject arrow;
@@ -148,6 +150,22 @@ public class PlayerMovement : MonoBehaviour
         dust.Play();
         FindObjectOfType<AudioManager>().Play("Dash");
 
+    }
+
+    private void CheckInteraction()
+    {
+        RaycastHit2D[] hits = Physics2D.BoxCastAll(transform.position, boxSize, 0, Vector2.zero);
+        if(hits.Length > 0)
+        {
+            foreach(RaycastHit2D rc in hits)
+            {
+                if (rc.transform.GetComponent<Interactable>())
+                {
+                    rc.transform.GetComponent<Interactable>().Interact();
+
+                }
+            }
+        }
     }
 
 }

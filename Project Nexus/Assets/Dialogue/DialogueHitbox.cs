@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class DialogueHitbox : MonoBehaviour
+public class DialogueHitbox : Interactable
 {
     public UnityEvent DisplayText;
     public UnityEvent NextSentence;
@@ -12,14 +12,34 @@ public class DialogueHitbox : MonoBehaviour
     public UnityEvent InteractIconOff;
     public Animator animator;
     public GameObject DialogueBox;
-    public bool collected = false;
+    private bool collected = false;
 
     void Awake()
     {
         animator = DialogueBox.GetComponent<Animator>();
     }
 
-    protected void OnTriggerEnter2D(Collider2D obj)
+    public override void Interact()
+    {
+        if (Input.GetKeyDown("e")
+        {
+            if (animator.GetBool("IsOpen") == false)
+            {
+                DisplayText.Invoke();
+                //collected = true;
+            }
+            else if (animator.GetBool("IsOpen") == true)
+            {
+                NextSentence.Invoke();
+                //collected = true;
+            }
+        }  
+    }
+
+
+    
+
+    /*protected void OnTriggerEnter2D(Collider2D obj)
     {
         collected = false;
     }
@@ -45,8 +65,8 @@ public class DialogueHitbox : MonoBehaviour
             collected = false;
         }
     }
-
-        private void OnTriggerExit2D(Collider2D obj)
+*/
+    private void OnTriggerExit2D(Collider2D obj)
     {
         if (obj.CompareTag("Player"))
         {
