@@ -17,6 +17,7 @@ public class DialogueHitbox : Interactable
     void Awake()
     {
         animator = DialogueBox.GetComponent<Animator>();
+        
     }
 
     public override void Interact()
