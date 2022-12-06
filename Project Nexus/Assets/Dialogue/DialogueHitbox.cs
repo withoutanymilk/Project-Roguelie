@@ -22,28 +22,33 @@ public class DialogueHitbox : Interactable
 
     public override void Interact()
     {
+        if (Input.GetKeyDown("e"))
+        {
+            DisplayText.Invoke();
+        }
         
-        if (collected == false)
+        /*if (collected == false)
         {
             DisplayText.Invoke();
             collected = true;
             return;
         }
-        else /*(animator.GetBool("IsOpen") == true)*/
+        else *//*(animator.GetBool("IsOpen") == true)*//*
         {
             NextSentence.Invoke();
             //collected = true;
             return;
-        }
+        }*/
     }
 
 
     protected void OnTriggerStay2D(Collider2D obj)
     {
-        if (Input.GetKeyDown("e"))
+        Interact();
+        /*if (Input.GetKeyDown("e"))
         {
-            Interact();
-        }
+            
+        }*/
     }
 
 
