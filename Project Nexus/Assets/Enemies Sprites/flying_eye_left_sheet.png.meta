@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9354b97a9e3c93640a762c53f4c79075
+guid: b47ae739fdefefb408aa365d141e1591
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,29 +101,80 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chest_mimic_open_anim_f0_0
+      name: flying_eye_left_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 14
+        x: 2
+        y: 4
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72e0d4669d8a4a240872272b362b65f2
+      internalID: 223506449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_eye_left_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 3
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae0dfa3b68e5474bbc8ce60c73a4162
+      internalID: -1455336558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_eye_left_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 4
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0344e3bda18a6458a6e176a712887e
+      internalID: -1026584293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_eye_left_3
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 4
+        width: 10
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e24456e871639ae4d86530a1f91c680d
-      internalID: -1497611297
+      spriteID: 3214103737e37634989a1e1e45891bad
+      internalID: -1926750819
       vertices: []
       indices: 
       edges: []
@@ -148,7 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      chest_mimic_open_anim_f0_0: -1497611297
+      flying_eye_left_1: -1455336558
+      flying_eye_left_2: -1026584293
+      flying_eye_left_3: -1926750819
+      flying_eye_left_0: 223506449
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
