@@ -95,12 +95,12 @@ public class PlayerAttack : MonoBehaviour
             if (BowCharge > 0f)
             {
                 BowCharge -= 1f * Time.deltaTime;
-                //FindObjectOfType<AudioManager>().Play("Arrow Charging");
             }
             else
             {
                 BowCharge = 0f;
                 CanFire = true;
+                FindObjectOfType<AudioManager>().Play("ChargeBow");
             }
 
             BowPowerSlider.value = BowCharge;
@@ -188,6 +188,7 @@ public class PlayerAttack : MonoBehaviour
             Debug.Log("I am here");
             swordAnim.SetBool("CanSwing", true);
             SwordCdCounter = SwordCooldown;
+            FindObjectOfType<AudioManager>().Play("SwordSwing");
         }
         CanSwing = false;
         //swordAnim.SetBool("CanSwing", false);

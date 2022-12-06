@@ -29,6 +29,7 @@ public class Arrow : MonoBehaviour
             Debug.Log("Enemy Attacked");
             Enemy enemy = other.gameObject.GetComponent<Enemy>();
             enemy.TakeDamage(ArrowDamage);
+            FindObjectOfType<AudioManager>().Play("TakeDamage");
         }
         Destroy(gameObject);
     }

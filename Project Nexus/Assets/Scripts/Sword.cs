@@ -29,6 +29,7 @@ public class Sword : MonoBehaviour
             Debug.Log("Enemy Attacked");
             Enemy enemy = other.gameObject.GetComponent<Enemy>();
             enemy.TakeDamage(SwordDamage);
+            FindObjectOfType<AudioManager>().Play("SwordDamage");
         }
         //Destroy(gameObject);
     }
