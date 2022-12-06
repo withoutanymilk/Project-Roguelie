@@ -22,15 +22,18 @@ public class DialogueHitbox : Interactable
 
     public override void Interact()
     {
-        if (animator.GetBool("IsOpen") == false)
+        
+        if (collected == false)
         {
             DisplayText.Invoke();
-            //collected = true;
+            collected = true;
+            return;
         }
-        else if (animator.GetBool("IsOpen") == true)
+        else /*(animator.GetBool("IsOpen") == true)*/
         {
             NextSentence.Invoke();
             //collected = true;
+            return;
         }
     }
 
@@ -45,11 +48,11 @@ public class DialogueHitbox : Interactable
 
 
 
-    /*protected void OnTriggerEnter2D(Collider2D obj)
+    protected void OnTriggerEnter2D(Collider2D obj)
     {
-        collected = false;
+        InteractIconOn.Invoke();
     }
-
+/*
     protected void OnTriggerStay2D(Collider2D obj)
     {
         
