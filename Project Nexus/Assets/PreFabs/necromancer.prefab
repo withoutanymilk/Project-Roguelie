@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 2092366110}
   - component: {fileID: 2092366111}
   - component: {fileID: 2092366112}
-  - component: {fileID: 2092366109}
   - component: {fileID: 2092366113}
+  - component: {fileID: -3522696932572304686}
   m_Layer: 0
   m_Name: necromancer
   m_TagString: Enemy
@@ -175,26 +175,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3
---- !u!114 &2092366109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2328015049223632711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52af62d2641b2f640a45d83cb6cd1dd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  checkRadius: 5
-  attackRadius: 0
-  shouldRotate: 1
-  whatisPlayer:
-    serializedVersion: 2
-    m_Bits: 64
-  dir: {x: 0, y: 0, z: 0}
 --- !u!114 &2092366113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,12 +187,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2406ddd32602a6849bd5391ec9dfb8e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.75
+  speed: 3
   attackDamage: 15
   attackSpeed: 0.4
   maxHealth: 30
   deathEffect: {fileID: 3183174944840039472, guid: 922cd35ad3022a14f8da239d85e0bd42, type: 3}
   healthImage: {fileID: 3314054435743889188}
+--- !u!114 &-3522696932572304686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2328015049223632711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5296317fb7089df42a33ff420e338f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  checkRadius: 5
+  attackRadius: 0
+  shouldRotate: 1
+  whatisPlayer:
+    serializedVersion: 2
+    m_Bits: 64
+  dir: {x: 0, y: 0, z: 0}
 --- !u!1 &3314054434244345719
 GameObject:
   m_ObjectHideFlags: 0
