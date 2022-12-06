@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4620647814267062435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4620647814267062493}
+  - component: {fileID: 4620647814267062434}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4620647814267062493
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4620647814267062435}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.610149, y: -7.7337723, z: -0.26024023}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4620647814267062434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4620647814267062435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80deef5cfcaa23742804690000acdd47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Arrow Charging
+    clip: {fileID: 8300000, guid: 58e5f7505b8681244a5b87d7d9050300, type: 3}
+    volume: 0.825
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Arrow Fired
+    clip: {fileID: 8300000, guid: 8843aeafc39faaf48b20a6840ccd042f, type: 3}
+    volume: 0.844
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ChargeBow
+    clip: {fileID: 8300000, guid: ddcffa5e47117fc49af6ab9f293fd823, type: 3}
+    volume: 0.788
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Death
+    clip: {fileID: 8300000, guid: 1a8dad7d06cd4a247b20ae7a13f99280, type: 3}
+    volume: 0.777
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Dash
+    clip: {fileID: 8300000, guid: 13342030c9e6a1846ae9afaaa0e23beb, type: 3}
+    volume: 0.777
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GameOver
+    clip: {fileID: 8300000, guid: 19c3217c9097348419bea961b36eec40, type: 3}
+    volume: 0.777
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: LevelComplete
+    clip: {fileID: 8300000, guid: 06740da6ab269a94db99ed8b78caa0a8, type: 3}
+    volume: 0.777
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: TakeDamage
+    clip: {fileID: 8300000, guid: f8c01ad8b82e6e54db8d9ef05e4ebd97, type: 3}
+    volume: 0.788
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SwordDamage
+    clip: {fileID: 8300000, guid: 3cd2ea726849d7f4cb01ac627a1db87c, type: 3}
+    volume: 0.788
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SwordSwing
+    clip: {fileID: 8300000, guid: 4ae5c1c928c3f9b408e7ca3c8095bf3e, type: 3}
+    volume: 0.788
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BattleTheme
+    clip: {fileID: 8300000, guid: b372cfb590fd3344088e0056dfc744aa, type: 3}
+    volume: 0.788
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}

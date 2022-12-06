@@ -35,6 +35,7 @@ public class PauseMenu : MonoBehaviour
         Arrow.SetActive(true);
         Weapon.SetActive(true);
         pauseMenuUI.SetActive(false);
+        FindObjectOfType<AudioManager>().Play("BattleTheme");
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
@@ -43,6 +44,7 @@ public class PauseMenu : MonoBehaviour
         Arrow.SetActive(false);
         Weapon.SetActive(false);
         pauseMenuUI.SetActive(true);
+        FindObjectOfType<AudioManager>().Stop("BattleTheme");
         Time.timeScale = 0f;
         GameIsPaused = true;
     }

@@ -543,9 +543,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2406ddd32602a6849bd5391ec9dfb8e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.75
+  speed: 1.5
   attackDamage: 30
-  attackSpeed: 1
+  attackSpeed: 0.3
   maxHealth: 50
   deathEffect: {fileID: 3183174944840039472, guid: 922cd35ad3022a14f8da239d85e0bd42, type: 3}
   healthImage: {fileID: 3314054435046272087}
@@ -624,9 +624,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52af62d2641b2f640a45d83cb6cd1dd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 1.5
   checkRadius: 3
-  attackRadius: 0
+  attackRadius: 1
   shouldRotate: 1
   whatisPlayer:
     serializedVersion: 2

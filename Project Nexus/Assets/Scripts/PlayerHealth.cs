@@ -47,6 +47,7 @@ public class PlayerHealth : MonoBehaviour
         gameOverUI.SetActive(true);
         Time.timeScale = 1f;
         //WeaponHolder.SetActive(false);
+        FindObjectOfType<AudioManager>().Stop("BattleTheme");
     }
     private void OnGUI()
     {

@@ -546,7 +546,7 @@ MonoBehaviour:
   speed: 3
   attackDamage: 10
   attackSpeed: 1
-  maxHealth: 5
+  maxHealth: 10
   deathEffect: {fileID: 3183174944840039472, guid: 922cd35ad3022a14f8da239d85e0bd42, type: 3}
   healthImage: {fileID: 8491759309527091390}
 --- !u!114 &8491759310314584759

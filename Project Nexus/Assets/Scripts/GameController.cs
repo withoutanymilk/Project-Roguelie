@@ -60,6 +60,7 @@ public class GameController : MonoBehaviour
         completeLevelUI.SetActive(true);
         Time.timeScale = 1f;
         WeaponHolder.SetActive(false);
+        FindObjectOfType<AudioManager>().Stop("BattleTheme");
     }
 
 }
