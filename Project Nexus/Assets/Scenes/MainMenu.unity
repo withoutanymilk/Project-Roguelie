@@ -3984,7 +3984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volumeTextValue: {fileID: 90487917}
   volumeSlider: {fileID: 426811123}
-  defaultVolume: 100
+  defaultVolume: 1
   ControllerSenTextValue: {fileID: 477582883}
   ControllerSenSlider: {fileID: 1557149218}
   defaultSen: 100
@@ -22337,7 +22337,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0.000061035156, y: 540.0894}
+  m_AnchoredPosition: {x: 0, y: 540.0894}
   m_SizeDelta: {x: 483, y: 1080.2}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1604848087
