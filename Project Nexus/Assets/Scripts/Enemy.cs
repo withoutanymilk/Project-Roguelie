@@ -57,8 +57,11 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        if (healthImage != null)
+        {
+            healthImage.fillAmount = health / maxHealth;
+        }
 
-        healthImage.fillAmount = health / maxHealth;
     }
 
     private void OnCollisionStay2D(Collision2D other)
