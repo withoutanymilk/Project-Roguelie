@@ -19,13 +19,17 @@ public class DialogueHitbox : Interactable
         animator = DialogueBox.GetComponent<Animator>();
         
     }
-
-    public override void Interact()
+    private void Update()
     {
-        if (Input.GetKeyDown("e"))
+        if (Input.GetKeyDown("e") && collected == true)
         {
             DisplayText.Invoke();
         }
+    }
+
+    public override void Interact()
+    {
+
         
         /*if (collected == false)
         {
@@ -44,8 +48,8 @@ public class DialogueHitbox : Interactable
 
     protected void OnTriggerStay2D(Collider2D obj)
     {
-        Interact();
-        /*if (Input.GetKeyDown("e"))
+/*        Interact();
+        *//*if (Input.GetKeyDown("e"))
         {
             
         }*/
@@ -56,6 +60,7 @@ public class DialogueHitbox : Interactable
     protected void OnTriggerEnter2D(Collider2D obj)
     {
         InteractIconOn.Invoke();
+        collected = true;
     }
 /*
     protected void OnTriggerStay2D(Collider2D obj)
